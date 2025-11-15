@@ -1,0 +1,12 @@
+{
+    "name": "HomeAutomation",
+    "description": "My home automations flows",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "HouseAutomation.json",
+            "credentialsFile": "HouseAutomation_cred.json"
+        }
+    }
+}
