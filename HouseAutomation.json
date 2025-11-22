@@ -210,14 +210,15 @@
             "fd8eccb0f2ad350b",
             "27b6134792ee97e7",
             "11975c0a0c43b144",
-            "54ad9e0fbabfb893",
             "87d2a8ea5dda0420",
-            "e3153802d3cea602"
+            "b16f9068191818c0",
+            "b9b82aee3b99b5fd",
+            "e3d870a55f818b4f"
         ],
         "x": 94,
         "y": 139,
-        "w": 792,
-        "h": 328
+        "w": 992,
+        "h": 202
     },
     {
         "id": "508ae12d86002f45",
@@ -239,7 +240,7 @@
         ],
         "x": 68,
         "y": 673,
-        "w": 1824,
+        "w": 1864,
         "h": 734
     },
     {
@@ -296,13 +297,12 @@
         "nodes": [
             "339ee96552d5f8ec",
             "1017c80d347dc591",
-            "61d046179ac402b7",
             "02471d6e0ac7beb7"
         ],
         "x": 94,
-        "y": 879,
+        "y": 899,
         "w": 592,
-        "h": 217
+        "h": 197
     },
     {
         "id": "3c53ea83c9afc30a",
@@ -344,26 +344,6 @@
         "h": 82
     },
     {
-        "id": "e3153802d3cea602",
-        "type": "group",
-        "z": "1c1f6e258d62731d",
-        "g": "d4dfc8ceda0be7b1",
-        "name": "Mock Notifications",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "2584f759336f0d24",
-            "793cb1b766cdeb27",
-            "6085a92dca0fb4c8",
-            "cec6c6e6e8bc46a9"
-        ],
-        "x": 134,
-        "y": 239,
-        "w": 212,
-        "h": 202
-    },
-    {
         "id": "e1edb53ff8f4fab5",
         "type": "group",
         "z": "1c1f6e258d62731d",
@@ -379,13 +359,12 @@
             "8ce8f26ef67e3c24",
             "f16489d0b8207dd8",
             "60eea330ed7afc03",
-            "0dbc5eed0c0ef4a0",
-            "86631865521407bd"
+            "28b7d5f64344e9a9"
         ],
         "x": 734,
         "y": 699,
-        "w": 1132,
-        "h": 122
+        "w": 1172,
+        "h": 82
     },
     {
         "id": "1a5b26be2238b1c0",
@@ -523,11 +502,11 @@
         "type": "junction",
         "z": "1c1f6e258d62731d",
         "g": "d4dfc8ceda0be7b1",
-        "x": 520,
+        "x": 420,
         "y": 260,
         "wires": [
             [
-                "703c1c1d00799394"
+                "b16f9068191818c0"
             ]
         ]
     },
@@ -545,6 +524,19 @@
         ]
     },
     {
+        "id": "e3d870a55f818b4f",
+        "type": "junction",
+        "z": "1c1f6e258d62731d",
+        "g": "d4dfc8ceda0be7b1",
+        "x": 960,
+        "y": 260,
+        "wires": [
+            [
+                "fd8eccb0f2ad350b"
+            ]
+        ]
+    },
+    {
         "id": "c5c22aa2.9710c8",
         "type": "server",
         "name": "Home Assistant",
@@ -555,7 +547,7 @@
         "type": "telegram bot",
         "botname": "evaristo_hs_bot",
         "usernames": "",
-        "chatids": "-4934083120,2119461818",
+        "chatids": "-4934083120,2119461818,6429197474",
         "baseapiurl": "",
         "testenvironment": false,
         "updatemode": "polling",
@@ -884,7 +876,7 @@
             {
                 "property": "payload",
                 "propertyType": "msg",
-                "value": "",
+                "value": "string",
                 "valueType": "entityState"
             },
             {
@@ -1658,11 +1650,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 790,
         "y": 260,
         "wires": [
             [
-                "fd8eccb0f2ad350b"
+                "e3d870a55f818b4f"
             ]
         ]
     },
@@ -1676,7 +1668,7 @@
         "links": [
             "0a21af0d54e47b32"
         ],
-        "x": 845,
+        "x": 1045,
         "y": 260,
         "wires": []
     },
@@ -1695,7 +1687,6 @@
         "y": 200,
         "wires": [
             [
-                "54ad9e0fbabfb893",
                 "11975c0a0c43b144",
                 "87d2a8ea5dda0420"
             ]
@@ -1711,146 +1702,6 @@
         "headers": {},
         "x": 480,
         "y": 180,
-        "wires": []
-    },
-    {
-        "id": "54ad9e0fbabfb893",
-        "type": "debug",
-        "z": "1c1f6e258d62731d",
-        "g": "d4dfc8ceda0be7b1",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 680,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "2584f759336f0d24",
-        "type": "inject",
-        "z": "1c1f6e258d62731d",
-        "g": "e3153802d3cea602",
-        "name": "EDP",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"title\":\"220003833839\",\"correspondent\":\"1\",\"tags\":\"EDP,House\",\"value\":\"55.31\",\"due_date\":\"19 nov 2025\"}",
-        "payloadType": "json",
-        "x": 230,
-        "y": 280,
-        "wires": [
-            [
-                "87d2a8ea5dda0420"
-            ]
-        ]
-    },
-    {
-        "id": "793cb1b766cdeb27",
-        "type": "inject",
-        "z": "1c1f6e258d62731d",
-        "g": "e3153802d3cea602",
-        "name": "Condominio",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"title\":\"aviso_2772, 2801\",\"correspondent\":\"3\",\"tags\":\"Condominio,House\",\"iban\":\"PT50000700000029453380823\",\"value\":\"65.31\",\"due_date\":\"09-11-2025\"}",
-        "payloadType": "json",
-        "x": 250,
-        "y": 320,
-        "wires": [
-            [
-                "87d2a8ea5dda0420"
-            ]
-        ]
-    },
-    {
-        "id": "6085a92dca0fb4c8",
-        "type": "inject",
-        "z": "1c1f6e258d62731d",
-        "g": "e3153802d3cea602",
-        "name": "Agua",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"title\":\"985.AR.DP.151653638\",\"doc_id\":\"105\",\"tags\":\"Agua,House\",\"entity\":\"21496\",\"reference\":\"57773202712\",\"value\":\"14.59\",\"due_date\":\"02 dez 2025\"}",
-        "payloadType": "json",
-        "x": 230,
-        "y": 360,
-        "wires": [
-            [
-                "87d2a8ea5dda0420"
-            ]
-        ]
-    },
-    {
-        "id": "cec6c6e6e8bc46a9",
-        "type": "inject",
-        "z": "1c1f6e258d62731d",
-        "g": "e3153802d3cea602",
-        "name": "Digi",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"title\":\"FC251621149\",\"correspondent\":\"4\",\"tags\":\"Digi,House\",\"entity\":\"22253\",\"reference\":\"110367636\",\"value\":\"7.33\",\"due_date\":\"31/10/2025\"}",
-        "payloadType": "json",
-        "x": 230,
-        "y": 400,
-        "wires": [
-            [
-                "87d2a8ea5dda0420"
-            ]
-        ]
-    },
-    {
-        "id": "61d046179ac402b7",
-        "type": "debug",
-        "z": "1c1f6e258d62731d",
-        "g": "ad06c47a6c1c904e",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 920,
         "wires": []
     },
     {
@@ -1878,7 +1729,6 @@
         "y": 1000,
         "wires": [
             [
-                "61d046179ac402b7",
                 "cb39efb18b5c7094"
             ],
             [
@@ -1938,19 +1788,18 @@
         "z": "1c1f6e258d62731d",
         "g": "e1edb53ff8f4fab5",
         "name": "Create Post request",
-        "func": "//Paperless API key\nlet apitoken = \"3604974dd252096efa73d08959c2833e96fd02b8\";\n\nmsg.headers = null;\nmsg.headers = {\n    \"Authorization\": \"Token \" + apitoken,\n    \"Content-Type\": \"multipart/form-data\"\n};\n\nmsg.method = \"POST\";\nmsg.url = \"http://192.168.1.141:8000/api/documents/post_document/\";\n\n\n// === Build multipart form-data ===\nmsg.payload = {\n    document: {\n        value: msg.payload,\n    },\n};\n\nreturn msg;",
+        "func": "//Paperless API key\nlet apitoken = \"3604974dd252096efa73d08959c2833e96fd02b8\";\n\nmsg.headers = null;\nmsg.headers = {\n    \"Authorization\": \"Token \" + apitoken,\n    \"Content-Type\": \"multipart/form-data\"\n};\n\nmsg.method = \"POST\";\nmsg.url = \"http://192.168.1.141:8000/api/documents/post_document/\";\n\nconst buffer = Buffer.from(msg.payload);\nconst filename = msg.originalMessage.document.file_name;\nconst mime = msg.originalMessage.document.mime_type;\n\n\n\n// === Build multipart form-data ===\nmsg.payload = {\n    document: {\n        value: buffer,\n        options: {\n            filename: filename,\n            contentType: mime\n        }\n    },\n    custom_fields: {\n        1: true\n    }\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1300,
+        "x": 1320,
         "y": 740,
         "wires": [
             [
-                "60eea330ed7afc03",
-                "86631865521407bd"
+                "60eea330ed7afc03"
             ]
         ]
     },
@@ -1975,44 +1824,93 @@
         "y": 740,
         "wires": [
             [
-                "0dbc5eed0c0ef4a0"
+                "28b7d5f64344e9a9"
             ]
         ]
     },
     {
-        "id": "0dbc5eed0c0ef4a0",
-        "type": "debug",
+        "id": "b16f9068191818c0",
+        "type": "switch",
         "z": "1c1f6e258d62731d",
-        "g": "e1edb53ff8f4fab5",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1760,
-        "y": 740,
-        "wires": []
+        "g": "d4dfc8ceda0be7b1",
+        "name": "",
+        "property": "payload.telegram",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "False",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "True",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "703c1c1d00799394"
+            ],
+            [
+                "b9b82aee3b99b5fd"
+            ],
+            []
+        ]
     },
     {
-        "id": "86631865521407bd",
-        "type": "debug",
+        "id": "b9b82aee3b99b5fd",
+        "type": "function",
+        "z": "1c1f6e258d62731d",
+        "g": "d4dfc8ceda0be7b1",
+        "name": "Create doc notification",
+        "func": "let doc_link = \"http://192.168.1.141:8000/documents/\" + msg.payload.doc_id + \"/preview\";\n\n// Build the Telegram message\nconst message = `\n📄 *Document Uploaded*\n\n*Name:* ${msg.payload.doc_name}\n*Tipo:* ${msg.payload.doc_type}\n*Date:* ${msg.payload.doc_date}\n*Corresp:* ${msg.payload.doc_correspondent}\n*Tags:* ${msg.payload.doc_tags}\n\n<a href=\"${doc_link}\">Documento</a>\n`;\n\nmsg.payload = \n{\n    type : \"message\",\n    chatId : flow.get(\"telegram_file_chat_id\"),\n    content: message,\n    options: { parse_mode: \"HTML\", disable_web_page_preview: true }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 300,
+        "wires": [
+            [
+                "e3d870a55f818b4f"
+            ]
+        ]
+    },
+    {
+        "id": "28b7d5f64344e9a9",
+        "type": "change",
         "z": "1c1f6e258d62731d",
         "g": "e1edb53ff8f4fab5",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1520,
-        "y": 780,
-        "wires": []
+        "name": "Save context chatID",
+        "rules": [
+            {
+                "t": "set",
+                "p": "telegram_file_chat_id",
+                "pt": "flow",
+                "to": "originalMessage.chat.id",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1780,
+        "y": 740,
+        "wires": [
+            []
+        ]
     }
 ]
