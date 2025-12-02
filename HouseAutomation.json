@@ -109,40 +109,6 @@
         ]
     },
     {
-        "id": "5f3c5912a9341383",
-        "type": "subflow",
-        "name": "Paperless HTTP post ",
-        "info": "",
-        "category": "",
-        "in": [
-            {
-                "x": 80,
-                "y": 60,
-                "wires": [
-                    {
-                        "id": "f16489d0b8207dd8"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 620,
-                "y": 60,
-                "wires": [
-                    {
-                        "id": "60eea330ed7afc03",
-                        "port": 0
-                    }
-                ]
-            }
-        ],
-        "env": [],
-        "meta": {},
-        "color": "#3FADB5",
-        "icon": "node-red/envelope.svg"
-    },
-    {
         "id": "a2cc58931fb6593b",
         "type": "group",
         "z": "0a06f0327cd1dc29",
@@ -161,27 +127,6 @@
         "y": 179,
         "w": 772,
         "h": 142
-    },
-    {
-        "id": "e7ad1d1506c6bc2e",
-        "type": "group",
-        "z": "1c1f6e258d62731d",
-        "g": "508ae12d86002f45",
-        "name": "Guest Mode",
-        "style": {
-            "label": true,
-            "stroke": "#ffC000"
-        },
-        "nodes": [
-            "5c0bd98adaf75e85",
-            "ef7d7d01809ec761",
-            "c9f84568b3cea9b7",
-            "f7eea95364d655dc"
-        ],
-        "x": 614,
-        "y": 639,
-        "w": 812,
-        "h": 82
     },
     {
         "id": "44c839dd4fe8940f",
@@ -209,26 +154,6 @@
         "h": 142
     },
     {
-        "id": "4224e80af2ddf4c8",
-        "type": "group",
-        "z": "1c1f6e258d62731d",
-        "g": "508ae12d86002f45",
-        "name": "Help Command",
-        "style": {
-            "label": true,
-            "stroke": "#ffC000"
-        },
-        "nodes": [
-            "1a5b26be2238b1c0",
-            "b0be2a841d77c6c3",
-            "5944592b450eb32e"
-        ],
-        "x": 614,
-        "y": 499,
-        "w": 832,
-        "h": 82
-    },
-    {
         "id": "98691177aedbf6ae",
         "type": "group",
         "z": "1c1f6e258d62731d",
@@ -243,45 +168,6 @@
         "x": 44,
         "y": -1,
         "w": 322,
-        "h": 82
-    },
-    {
-        "id": "ad06c47a6c1c904e",
-        "type": "group",
-        "z": "1c1f6e258d62731d",
-        "g": "508ae12d86002f45",
-        "name": "Telegram Receive Message",
-        "style": {
-            "label": true,
-            "stroke": "#0070c0"
-        },
-        "nodes": [
-            "339ee96552d5f8ec",
-            "1017c80d347dc591"
-        ],
-        "x": 114,
-        "y": 624,
-        "w": 452,
-        "h": 112
-    },
-    {
-        "id": "3c53ea83c9afc30a",
-        "type": "group",
-        "z": "1c1f6e258d62731d",
-        "g": "508ae12d86002f45",
-        "name": "Else",
-        "style": {
-            "label": true,
-            "stroke": "#ffC000"
-        },
-        "nodes": [
-            "ebf2eb26c118356f",
-            "6d409e3187fb28c4",
-            "9ac77f83fddd9b1b"
-        ],
-        "x": 614,
-        "y": 939,
-        "w": 832,
         "h": 82
     },
     {
@@ -312,6 +198,134 @@
         "h": 202
     },
     {
+        "id": "d4dfc8ceda0be7b1",
+        "type": "group",
+        "z": "1c1f6e258d62731d",
+        "name": "Bills Notifications",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "703c1c1d00799394",
+            "fd8eccb0f2ad350b",
+            "27b6134792ee97e7",
+            "11975c0a0c43b144",
+            "87d2a8ea5dda0420",
+            "b16f9068191818c0",
+            "b9b82aee3b99b5fd",
+            "e3d870a55f818b4f",
+            "c7acf3c1df33edba"
+        ],
+        "x": 94,
+        "y": 139,
+        "w": 992,
+        "h": 202
+    },
+    {
+        "id": "508ae12d86002f45",
+        "type": "group",
+        "z": "1c1f6e258d62731d",
+        "name": "Telegram Input Processor",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6f783c49b76664c7",
+            "d5a01fa93b0b4435",
+            "e7ad1d1506c6bc2e",
+            "4224e80af2ddf4c8",
+            "ad06c47a6c1c904e",
+            "3c53ea83c9afc30a",
+            "dc86f371d7939957",
+            "e1edb53ff8f4fab5"
+        ],
+        "x": 98,
+        "y": 433,
+        "w": 1864,
+        "h": 734
+    },
+    {
+        "id": "e7ad1d1506c6bc2e",
+        "type": "group",
+        "z": "1c1f6e258d62731d",
+        "g": "508ae12d86002f45",
+        "name": "Guest Mode",
+        "style": {
+            "label": true,
+            "stroke": "#ffC000"
+        },
+        "nodes": [
+            "5c0bd98adaf75e85",
+            "ef7d7d01809ec761",
+            "c9f84568b3cea9b7",
+            "f7eea95364d655dc"
+        ],
+        "x": 764,
+        "y": 759,
+        "w": 812,
+        "h": 82
+    },
+    {
+        "id": "4224e80af2ddf4c8",
+        "type": "group",
+        "z": "1c1f6e258d62731d",
+        "g": "508ae12d86002f45",
+        "name": "Help Command",
+        "style": {
+            "label": true,
+            "stroke": "#ffC000"
+        },
+        "nodes": [
+            "1a5b26be2238b1c0",
+            "b0be2a841d77c6c3",
+            "5944592b450eb32e"
+        ],
+        "x": 764,
+        "y": 619,
+        "w": 832,
+        "h": 82
+    },
+    {
+        "id": "ad06c47a6c1c904e",
+        "type": "group",
+        "z": "1c1f6e258d62731d",
+        "g": "508ae12d86002f45",
+        "name": "Telegram Receive Message",
+        "style": {
+            "label": true,
+            "stroke": "#0070c0"
+        },
+        "nodes": [
+            "339ee96552d5f8ec",
+            "1017c80d347dc591",
+            "02471d6e0ac7beb7"
+        ],
+        "x": 124,
+        "y": 659,
+        "w": 592,
+        "h": 197
+    },
+    {
+        "id": "3c53ea83c9afc30a",
+        "type": "group",
+        "z": "1c1f6e258d62731d",
+        "g": "508ae12d86002f45",
+        "name": "Else",
+        "style": {
+            "label": true,
+            "stroke": "#ffC000"
+        },
+        "nodes": [
+            "ebf2eb26c118356f",
+            "6d409e3187fb28c4",
+            "9ac77f83fddd9b1b"
+        ],
+        "x": 764,
+        "y": 1059,
+        "w": 832,
+        "h": 82
+    },
+    {
         "id": "dc86f371d7939957",
         "type": "group",
         "z": "1c1f6e258d62731d",
@@ -325,82 +339,41 @@
             "ad619b5b11c7c22a",
             "3d670f449623258f"
         ],
-        "x": 614,
-        "y": 799,
+        "x": 764,
+        "y": 919,
         "w": 202,
         "h": 82
     },
     {
-        "id": "d4dfc8ceda0be7b1",
+        "id": "e1edb53ff8f4fab5",
         "type": "group",
         "z": "1c1f6e258d62731d",
-        "name": "Bills Notifications",
+        "g": "508ae12d86002f45",
+        "name": "Process Docs",
         "style": {
-            "label": true
+            "label": true,
+            "stroke": "#001f60"
         },
         "nodes": [
-            "703c1c1d00799394",
-            "fd8eccb0f2ad350b",
-            "27b6134792ee97e7",
-            "11975c0a0c43b144",
-            "54ad9e0fbabfb893",
-            "87d2a8ea5dda0420",
-            "e3153802d3cea602"
+            "cb39efb18b5c7094",
+            "3ac6aca8d87aad45",
+            "8ce8f26ef67e3c24",
+            "f16489d0b8207dd8",
+            "60eea330ed7afc03",
+            "28b7d5f64344e9a9"
         ],
-        "x": 94,
-        "y": 139,
-        "w": 792,
-        "h": 328
-    },
-    {
-        "id": "508ae12d86002f45",
-        "type": "group",
-        "z": "1c1f6e258d62731d",
-        "name": "Telegram Commands",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "6f783c49b76664c7",
-            "d5a01fa93b0b4435",
-            "e7ad1d1506c6bc2e",
-            "4224e80af2ddf4c8",
-            "ad06c47a6c1c904e",
-            "3c53ea83c9afc30a",
-            "dc86f371d7939957"
-        ],
-        "x": 88,
-        "y": 473,
-        "w": 1568,
-        "h": 574
-    },
-    {
-        "id": "e3153802d3cea602",
-        "type": "group",
-        "z": "1c1f6e258d62731d",
-        "g": "d4dfc8ceda0be7b1",
-        "name": "Mock Notifications",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "2584f759336f0d24",
-            "793cb1b766cdeb27",
-            "6085a92dca0fb4c8",
-            "cec6c6e6e8bc46a9"
-        ],
-        "x": 134,
-        "y": 239,
-        "w": 212,
-        "h": 202
+        "x": 764,
+        "y": 459,
+        "w": 1172,
+        "h": 82
     },
     {
         "id": "1a5b26be2238b1c0",
         "type": "junction",
         "z": "1c1f6e258d62731d",
         "g": "4224e80af2ddf4c8",
-        "x": 640,
-        "y": 540,
+        "x": 790,
+        "y": 660,
         "wires": [
             [
                 "5944592b450eb32e"
@@ -412,8 +385,8 @@
         "type": "junction",
         "z": "1c1f6e258d62731d",
         "g": "3c53ea83c9afc30a",
-        "x": 640,
-        "y": 980,
+        "x": 790,
+        "y": 1100,
         "wires": [
             [
                 "ebf2eb26c118356f"
@@ -425,8 +398,8 @@
         "type": "junction",
         "z": "1c1f6e258d62731d",
         "g": "e7ad1d1506c6bc2e",
-        "x": 640,
-        "y": 680,
+        "x": 790,
+        "y": 800,
         "wires": [
             [
                 "5c0bd98adaf75e85"
@@ -438,8 +411,8 @@
         "type": "junction",
         "z": "1c1f6e258d62731d",
         "g": "508ae12d86002f45",
-        "x": 1500,
-        "y": 680,
+        "x": 1650,
+        "y": 800,
         "wires": [
             [
                 "6f783c49b76664c7"
@@ -451,8 +424,8 @@
         "type": "junction",
         "z": "1c1f6e258d62731d",
         "g": "4224e80af2ddf4c8",
-        "x": 1420,
-        "y": 540,
+        "x": 1570,
+        "y": 660,
         "wires": [
             [
                 "d5a01fa93b0b4435"
@@ -464,8 +437,8 @@
         "type": "junction",
         "z": "1c1f6e258d62731d",
         "g": "3c53ea83c9afc30a",
-        "x": 1420,
-        "y": 980,
+        "x": 1570,
+        "y": 1100,
         "wires": [
             [
                 "d5a01fa93b0b4435"
@@ -477,8 +450,8 @@
         "type": "junction",
         "z": "1c1f6e258d62731d",
         "g": "dc86f371d7939957",
-        "x": 640,
-        "y": 840,
+        "x": 790,
+        "y": 960,
         "wires": [
             [
                 "ad619b5b11c7c22a"
@@ -530,11 +503,37 @@
         "type": "junction",
         "z": "1c1f6e258d62731d",
         "g": "d4dfc8ceda0be7b1",
-        "x": 520,
+        "x": 420,
         "y": 260,
         "wires": [
             [
-                "703c1c1d00799394"
+                "b16f9068191818c0"
+            ]
+        ]
+    },
+    {
+        "id": "cb39efb18b5c7094",
+        "type": "junction",
+        "z": "1c1f6e258d62731d",
+        "g": "e1edb53ff8f4fab5",
+        "x": 790,
+        "y": 500,
+        "wires": [
+            [
+                "3ac6aca8d87aad45"
+            ]
+        ]
+    },
+    {
+        "id": "e3d870a55f818b4f",
+        "type": "junction",
+        "z": "1c1f6e258d62731d",
+        "g": "d4dfc8ceda0be7b1",
+        "x": 960,
+        "y": 260,
+        "wires": [
+            [
+                "fd8eccb0f2ad350b"
             ]
         ]
     },
@@ -549,7 +548,7 @@
         "type": "telegram bot",
         "botname": "evaristo_hs_bot",
         "usernames": "",
-        "chatids": "-4934083120,2119461818",
+        "chatids": "-4934083120,2119461818,6429197474",
         "baseapiurl": "",
         "testenvironment": false,
         "updatemode": "polling",
@@ -570,6 +569,23 @@
         "useselfsignedcertificate": false,
         "sslterminated": false,
         "verboselogging": false
+    },
+    {
+        "id": "c2a0f9c0d5079943",
+        "type": "global-config",
+        "env": [
+            {
+                "name": "EvaristoToken",
+                "value": "8295226254:AAEx51G5Ka9mEnp1RVEG_sYVjO8FsxIoKd4",
+                "type": "str"
+            },
+            {
+                "name": "PaperlessToken",
+                "value": "3604974dd252096efa73d08959c2833e96fd02b8",
+                "type": "str"
+            }
+        ],
+        "modules": {}
     },
     {
         "id": "954bcf57e02cad2a",
@@ -694,48 +710,6 @@
         "y": 180,
         "wires": [
             [],
-            []
-        ]
-    },
-    {
-        "id": "f16489d0b8207dd8",
-        "type": "function",
-        "z": "5f3c5912a9341383",
-        "name": "Create HTTPS request",
-        "func": "//Paperless API key\nconst apitoken = \"3604974dd252096efa73d08959c2833e96fd02b8\";\n\nmsg.method = \"POST\";\nmsg.url = \"http://192.168.1.141:8000/api/documents/post_document/\";\nmsg.headers = {\n    \"Authorization\": \"Token \" + apitoken,\n    \"Content-Type\": \"multipart/form-data\"\n};\n\n\n// === Build multipart form-data ===\nmsg.payload = {\n    document: {\n        value: msg.pdf,\n        options: {\n            filename : msg.paperless.title,\n            contentType : \"application/pdf\",\n            tags : msg.paperless.tags,\n            correspondent : msg.paperless.correspondent,\n            storage_path: msg.paperless.storage_path,\n            document_type : msg.paperless.document_type\n        }\n    },\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 240,
-        "y": 60,
-        "wires": [
-            [
-                "60eea330ed7afc03"
-            ]
-        ]
-    },
-    {
-        "id": "60eea330ed7afc03",
-        "type": "http request",
-        "z": "5f3c5912a9341383",
-        "name": "Send HTTP request",
-        "method": "POST",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 470,
-        "y": 60,
-        "wires": [
             []
         ]
     },
@@ -903,7 +877,7 @@
             {
                 "property": "payload",
                 "propertyType": "msg",
-                "value": "",
+                "value": "string",
                 "valueType": "entityState"
             },
             {
@@ -1428,8 +1402,8 @@
         "blockInputOverrides": true,
         "domain": "input_boolean",
         "service": "toggle",
-        "x": 850,
-        "y": 680,
+        "x": 1000,
+        "y": 800,
         "wires": [
             [
                 "ef7d7d01809ec761"
@@ -1467,8 +1441,8 @@
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
-        "x": 1050,
-        "y": 680,
+        "x": 1200,
+        "y": 800,
         "wires": [
             [
                 "c9f84568b3cea9b7"
@@ -1487,8 +1461,8 @@
         "syntax": "mustache",
         "template": "{\n    \"type\": \"message\",\n    \"chatId\": \"{{originalMessage.chat.id}}\",\n    \"content\": \"Guest mode is {{guestmode}}\"\n}",
         "output": "json",
-        "x": 1280,
-        "y": 680,
+        "x": 1430,
+        "y": 800,
         "wires": [
             [
                 "d5a01fa93b0b4435"
@@ -1504,11 +1478,11 @@
         "bot": "65fd5070566c323e",
         "saveDataDir": "",
         "filterCommands": false,
-        "x": 230,
-        "y": 680,
+        "x": 240,
+        "y": 700,
         "wires": [
             [
-                "1017c80d347dc591"
+                "02471d6e0ac7beb7"
             ],
             []
         ]
@@ -1544,8 +1518,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 4,
-        "x": 460,
-        "y": 680,
+        "x": 610,
+        "y": 800,
         "wires": [
             [
                 "1a5b26be2238b1c0"
@@ -1590,8 +1564,8 @@
         "links": [
             "0a21af0d54e47b32"
         ],
-        "x": 1615,
-        "y": 680,
+        "x": 1765,
+        "y": 800,
         "wires": []
     },
     {
@@ -1621,8 +1595,8 @@
         "syntax": "mustache",
         "template": "{\n    \"type\": \"message\",\n    \"chatId\": \"{{originalMessage.chat.id}}\",\n    \"content\": \"Command not available\"\n}",
         "output": "json",
-        "x": 1050,
-        "y": 980,
+        "x": 1200,
+        "y": 1100,
         "wires": [
             [
                 "9ac77f83fddd9b1b"
@@ -1639,8 +1613,8 @@
         "links": [
             "57a45e26ab8d85ad"
         ],
-        "x": 775,
-        "y": 840,
+        "x": 925,
+        "y": 960,
         "wires": []
     },
     {
@@ -1656,8 +1630,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1060,
-        "y": 540,
+        "x": 1210,
+        "y": 660,
         "wires": [
             [
                 "b0be2a841d77c6c3"
@@ -1670,18 +1644,18 @@
         "z": "1c1f6e258d62731d",
         "g": "d4dfc8ceda0be7b1",
         "name": "Create notification",
-        "func": "let message = \"\";\n\nlet doc_link = \"http://192.168.1.141:8000/documents/\" + msg.payload.doc_id + \"/preview\";\n\nif (msg.payload.tags.includes(\"EDP\"))\n{\n    message = `\n        📄 *Oublá, olha a luz deste mes!*\n\n        ⚡--------------------------------⚡\n        🧾            EDP\n        📅   ${msg.payload.due_date}\n        💶   ${msg.payload.value} €\n        🔗 <a href=\"${doc_link}\">Documento</a>\n        ⚡--------------------------------⚡\n        `;\n}\nelse if (msg.payload.tags.includes(\"Agua\"))\n{\n    message = `\n        📄 *Oublá, há uma fatura nova para pagar!*\n\n        💧--------------------------------💧\n        🧾 Serviço: Agua\n        📅 Data Limite: ${msg.payload.due_date}\n        🏢 Entidade: ${msg.payload.entity}\n        🔢 Referencia: ${msg.payload.reference}\n        💶 Valor: ${msg.payload.value} €\n        🔗 <a href=\"${doc_link}\">Documento</a>\n        💧--------------------------------💧\n        `;\n}\nelse if (msg.payload.tags.includes(\"Digi\"))\n{\n    message = `\n        📄 *Oublá, há uma fatura nova para pagar!*\n        \n        🌐--------------------------------🌐\n        🧾 Serviço: Digi\n        📅 Data Limite: ${msg.payload.due_date}\n        🏢 Entidade: ${msg.payload.entity}\n        🔢 Referencia: ${msg.payload.reference}\n        💶 Valor: ${msg.payload.value} €\n        🔗 <a href=\"${doc_link}\">Documento</a>\n        🌐--------------------------------🌐\n        `;\n}\nelse if (msg.payload.tags.includes(\"Condominio\")) {\n    message = `\n        📄 *Oublá, há uma fatura nova para pagar!*\n        \n        🏠--------------------------------🏠\n        🧾 Serviço: Condominio\n        📅 Data Limite: ${msg.payload.due_date}\n        🔢 IBAN: ${msg.payload.iban}\n        💶 Valor: ${msg.payload.value} €\n        🔗 <a href=\"${doc_link}\">Documento</a>\n        🏠--------------------------------🏠\n        `;\n}\n\nmsg.payload = \n{\n    type : \"message\",\n    chatId : \"-4934083120\",\n    content : message,\n    options: { parse_mode: \"HTML\", disable_web_page_preview: true }\n}\n\n\nreturn msg;",
+        "func": "let message = \"\";\n\nlet doc_link = \"http://192.168.1.141:8000/documents/\" + msg.payload.doc_id + \"/preview\";\n\nif (msg.payload.tags.includes(\"EDP\"))\n{\n    message = `\n        📄 *Oublá, olha a luz deste mes!*\n\n        ⚡--------------------------------⚡\n        🧾            EDP\n        💶   ${msg.payload.value} €\n        🔗 <a href=\"${doc_link}\">Documento</a>\n        ⚡--------------------------------⚡\n        `;\n}\nelse if (msg.payload.tags.includes(\"Agua\"))\n{\n    message = `\n        📄 *Oublá, há uma fatura nova para pagar!*\n\n        💧--------------------------------💧\n        🧾 Serviço: Agua\n        📅 Data Limite: ${msg.payload.due_date}\n        🏢 Entidade: ${msg.payload.entity}\n        🔢 Referencia: ${msg.payload.reference}\n        💶 Valor: ${msg.payload.value} €\n        🔗 <a href=\"${doc_link}\">Documento</a>\n        💧--------------------------------💧\n        `;\n}\nelse if (msg.payload.tags.includes(\"Digi\"))\n{\n    message = `\n        📄 *Oublá, há uma fatura nova para pagar!*\n        \n        🌐--------------------------------🌐\n        🧾 Serviço: Digi\n        📅 Data Limite: ${msg.payload.due_date}\n        🏢 Entidade: ${msg.payload.entity}\n        🔢 Referencia: ${msg.payload.reference}\n        💶 Valor: ${msg.payload.value} €\n        🔗 <a href=\"${doc_link}\">Documento</a>\n        🌐--------------------------------🌐\n        `;\n}\nelse if (msg.payload.tags.includes(\"Condominio\")) {\n    message = `\n        📄 *Oublá, há uma fatura nova para pagar!*\n        \n        🏠--------------------------------🏠\n        🧾 Serviço: Condominio\n        📅 Data Limite: ${msg.payload.due_date}\n        🔢 IBAN: ${msg.payload.iban}\n        💶 Valor: ${msg.payload.value} €\n        🔗 <a href=\"${doc_link}\">Documento</a>\n        🏠--------------------------------🏠\n        `;\n}\n\nmsg.payload = \n{\n    type : \"message\",\n    chatId : \"-4934083120\",\n    content : message,\n    options: { parse_mode: \"HTML\", disable_web_page_preview: true }\n}\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 790,
         "y": 260,
         "wires": [
             [
-                "fd8eccb0f2ad350b"
+                "e3d870a55f818b4f"
             ]
         ]
     },
@@ -1695,7 +1669,7 @@
         "links": [
             "0a21af0d54e47b32"
         ],
-        "x": 845,
+        "x": 1045,
         "y": 260,
         "wires": []
     },
@@ -1714,9 +1688,9 @@
         "y": 200,
         "wires": [
             [
-                "54ad9e0fbabfb893",
                 "11975c0a0c43b144",
-                "87d2a8ea5dda0420"
+                "87d2a8ea5dda0420",
+                "c7acf3c1df33edba"
             ]
         ]
     },
@@ -1733,11 +1707,220 @@
         "wires": []
     },
     {
-        "id": "54ad9e0fbabfb893",
+        "id": "02471d6e0ac7beb7",
+        "type": "switch",
+        "z": "1c1f6e258d62731d",
+        "g": "ad06c47a6c1c904e",
+        "name": "Filter by message or doc",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "document",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 340,
+        "y": 760,
+        "wires": [
+            [
+                "cb39efb18b5c7094"
+            ],
+            [
+                "1017c80d347dc591"
+            ]
+        ]
+    },
+    {
+        "id": "3ac6aca8d87aad45",
+        "type": "function",
+        "z": "1c1f6e258d62731d",
+        "g": "e1edb53ff8f4fab5",
+        "name": "Prepare request",
+        "func": "msg.method = \"GET\";\nmsg.url = msg.payload.weblink;   // Full Telegram download URL\nmsg.headers = {};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 500,
+        "wires": [
+            [
+                "8ce8f26ef67e3c24"
+            ]
+        ]
+    },
+    {
+        "id": "8ce8f26ef67e3c24",
+        "type": "http request",
+        "z": "1c1f6e258d62731d",
+        "g": "e1edb53ff8f4fab5",
+        "name": "Get file",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1130,
+        "y": 500,
+        "wires": [
+            [
+                "f16489d0b8207dd8"
+            ]
+        ]
+    },
+    {
+        "id": "f16489d0b8207dd8",
+        "type": "function",
+        "z": "1c1f6e258d62731d",
+        "g": "e1edb53ff8f4fab5",
+        "name": "Create Post request",
+        "func": "//Paperless API key\nlet apitoken = \"3604974dd252096efa73d08959c2833e96fd02b8\";\n\nmsg.headers = null;\nmsg.headers = {\n    \"Authorization\": \"Token \" + apitoken,\n    \"Content-Type\": \"multipart/form-data\"\n};\n\nmsg.method = \"POST\";\nmsg.url = \"http://192.168.1.141:8000/api/documents/post_document/\";\n\nconst buffer = Buffer.from(msg.payload);\nconst filename = msg.originalMessage.document.file_name;\nconst mime = msg.originalMessage.document.mime_type;\n\n\n\n// === Build multipart form-data ===\nmsg.payload = {\n    document: {\n        value: buffer,\n        options: {\n            filename: filename,\n            contentType: mime\n        }\n    },\n    custom_fields: {\n        1: true\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 500,
+        "wires": [
+            [
+                "60eea330ed7afc03"
+            ]
+        ]
+    },
+    {
+        "id": "60eea330ed7afc03",
+        "type": "http request",
+        "z": "1c1f6e258d62731d",
+        "g": "e1edb53ff8f4fab5",
+        "name": "Paperless Post",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1590,
+        "y": 500,
+        "wires": [
+            [
+                "28b7d5f64344e9a9"
+            ]
+        ]
+    },
+    {
+        "id": "b16f9068191818c0",
+        "type": "switch",
+        "z": "1c1f6e258d62731d",
+        "g": "d4dfc8ceda0be7b1",
+        "name": "",
+        "property": "payload.telegram",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "False",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "True",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "703c1c1d00799394"
+            ],
+            [
+                "b9b82aee3b99b5fd"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b9b82aee3b99b5fd",
+        "type": "function",
+        "z": "1c1f6e258d62731d",
+        "g": "d4dfc8ceda0be7b1",
+        "name": "Create doc notification",
+        "func": "let doc_link = \"http://192.168.1.141:8000/documents/\" + msg.payload.doc_id + \"/preview\";\n\n// Build the Telegram message\nconst message = `\n📄 *Document Uploaded*\n\n*Name:* ${msg.payload.doc_name}\n*Tipo:* ${msg.payload.doc_type}\n*Date:* ${msg.payload.doc_date}\n*Corresp:* ${msg.payload.doc_correspondent}\n*Tags:* ${msg.payload.doc_tags}\n\n<a href=\"${doc_link}\">Documento</a>\n`;\n\nmsg.payload = \n{\n    type : \"message\",\n    chatId : flow.get(\"telegram_file_chat_id\"),\n    content: message,\n    options: { parse_mode: \"HTML\", disable_web_page_preview: true }\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 300,
+        "wires": [
+            [
+                "e3d870a55f818b4f"
+            ]
+        ]
+    },
+    {
+        "id": "28b7d5f64344e9a9",
+        "type": "change",
+        "z": "1c1f6e258d62731d",
+        "g": "e1edb53ff8f4fab5",
+        "name": "Save context chatID",
+        "rules": [
+            {
+                "t": "set",
+                "p": "telegram_file_chat_id",
+                "pt": "flow",
+                "to": "originalMessage.chat.id",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1810,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c7acf3c1df33edba",
         "type": "debug",
         "z": "1c1f6e258d62731d",
         "g": "d4dfc8ceda0be7b1",
-        "name": "debug 9",
+        "name": "debug 1",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1746,123 +1929,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 200,
+        "x": 360,
+        "y": 300,
         "wires": []
-    },
-    {
-        "id": "2584f759336f0d24",
-        "type": "inject",
-        "z": "1c1f6e258d62731d",
-        "g": "e3153802d3cea602",
-        "name": "EDP",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"title\":\"220003833839\",\"correspondent\":\"1\",\"tags\":\"EDP,House\",\"value\":\"55.31\",\"due_date\":\"19 nov 2025\"}",
-        "payloadType": "json",
-        "x": 230,
-        "y": 280,
-        "wires": [
-            [
-                "87d2a8ea5dda0420"
-            ]
-        ]
-    },
-    {
-        "id": "793cb1b766cdeb27",
-        "type": "inject",
-        "z": "1c1f6e258d62731d",
-        "g": "e3153802d3cea602",
-        "name": "Condominio",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"title\":\"aviso_2772, 2801\",\"correspondent\":\"3\",\"tags\":\"Condominio,House\",\"iban\":\"PT50000700000029453380823\",\"value\":\"65.31\",\"due_date\":\"09-11-2025\"}",
-        "payloadType": "json",
-        "x": 250,
-        "y": 320,
-        "wires": [
-            [
-                "87d2a8ea5dda0420"
-            ]
-        ]
-    },
-    {
-        "id": "6085a92dca0fb4c8",
-        "type": "inject",
-        "z": "1c1f6e258d62731d",
-        "g": "e3153802d3cea602",
-        "name": "Agua",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"title\":\"985.AR.DP.151653638\",\"doc_id\":\"105\",\"tags\":\"Agua,House\",\"entity\":\"21496\",\"reference\":\"57773202712\",\"value\":\"14.59\",\"due_date\":\"02 dez 2025\"}",
-        "payloadType": "json",
-        "x": 230,
-        "y": 360,
-        "wires": [
-            [
-                "87d2a8ea5dda0420"
-            ]
-        ]
-    },
-    {
-        "id": "cec6c6e6e8bc46a9",
-        "type": "inject",
-        "z": "1c1f6e258d62731d",
-        "g": "e3153802d3cea602",
-        "name": "Digi",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"title\":\"FC251621149\",\"correspondent\":\"4\",\"tags\":\"Digi,House\",\"entity\":\"22253\",\"reference\":\"110367636\",\"value\":\"7.33\",\"due_date\":\"31/10/2025\"}",
-        "payloadType": "json",
-        "x": 230,
-        "y": 400,
-        "wires": [
-            [
-                "87d2a8ea5dda0420"
-            ]
-        ]
-    },
-    {
-        "id": "a139a66ed93ed009",
-        "type": "subflow:5f3c5912a9341383",
-        "z": "1c1f6e258d62731d",
-        "name": "",
-        "x": 1260,
-        "y": 280,
-        "wires": [
-            []
-        ]
     }
 ]
