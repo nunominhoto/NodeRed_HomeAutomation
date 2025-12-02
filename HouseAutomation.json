@@ -237,7 +237,8 @@
             "ad06c47a6c1c904e",
             "3c53ea83c9afc30a",
             "dc86f371d7939957",
-            "e1edb53ff8f4fab5"
+            "e1edb53ff8f4fab5",
+            "546da9f9dedf6314"
         ],
         "x": 98,
         "y": 433,
@@ -298,12 +299,13 @@
         "nodes": [
             "339ee96552d5f8ec",
             "1017c80d347dc591",
-            "02471d6e0ac7beb7"
+            "02471d6e0ac7beb7",
+            "5f7f2002149d69ad"
         ],
         "x": 124,
         "y": 659,
         "w": 592,
-        "h": 197
+        "h": 282
     },
     {
         "id": "3c53ea83c9afc30a",
@@ -340,7 +342,7 @@
             "3d670f449623258f"
         ],
         "x": 764,
-        "y": 919,
+        "y": 959,
         "w": 202,
         "h": 82
     },
@@ -366,6 +368,44 @@
         "y": 459,
         "w": 1172,
         "h": 82
+    },
+    {
+        "id": "546da9f9dedf6314",
+        "type": "group",
+        "z": "1c1f6e258d62731d",
+        "g": "508ae12d86002f45",
+        "name": "Fire place 🔥",
+        "style": {
+            "label": true,
+            "stroke": "#ffC000"
+        },
+        "nodes": [
+            "c8a84de3b1e1be60",
+            "5d83bc688529b09a"
+        ],
+        "x": 764,
+        "y": 859,
+        "w": 202,
+        "h": 82
+    },
+    {
+        "id": "a926ec102b0a6476",
+        "type": "group",
+        "z": "0a06f0327cd1dc29",
+        "name": "Fireplace TV",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "922f2401a66a9303",
+            "8a8430eb8e1c5d39",
+            "e385904555dfa10a",
+            "e0ab717ca32176ce"
+        ],
+        "x": 34,
+        "y": 599,
+        "w": 772,
+        "h": 142
     },
     {
         "id": "1a5b26be2238b1c0",
@@ -451,7 +491,7 @@
         "z": "1c1f6e258d62731d",
         "g": "dc86f371d7939957",
         "x": 790,
-        "y": 960,
+        "y": 1000,
         "wires": [
             [
                 "ad619b5b11c7c22a"
@@ -534,6 +574,19 @@
         "wires": [
             [
                 "fd8eccb0f2ad350b"
+            ]
+        ]
+    },
+    {
+        "id": "5d83bc688529b09a",
+        "type": "junction",
+        "z": "1c1f6e258d62731d",
+        "g": "546da9f9dedf6314",
+        "x": 790,
+        "y": 900,
+        "wires": [
+            [
+                "c8a84de3b1e1be60"
             ]
         ]
     },
@@ -1377,6 +1430,103 @@
         "wires": []
     },
     {
+        "id": "922f2401a66a9303",
+        "type": "link in",
+        "z": "0a06f0327cd1dc29",
+        "g": "a926ec102b0a6476",
+        "name": "Fire",
+        "links": [
+            "c8a84de3b1e1be60"
+        ],
+        "x": 75,
+        "y": 640,
+        "wires": [
+            [
+                "8a8430eb8e1c5d39"
+            ]
+        ]
+    },
+    {
+        "id": "8a8430eb8e1c5d39",
+        "type": "api-call-service",
+        "z": "0a06f0327cd1dc29",
+        "g": "a926ec102b0a6476",
+        "name": "Turn Digi TV On",
+        "server": "c5c22aa2.9710c8",
+        "version": 7,
+        "debugenabled": false,
+        "action": "homeassistant.turn_on",
+        "floorId": [],
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "remote.digi_r1a"
+        ],
+        "labelId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "task",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "homeassistant",
+        "service": "turn_on",
+        "x": 230,
+        "y": 640,
+        "wires": [
+            [
+                "e385904555dfa10a"
+            ]
+        ]
+    },
+    {
+        "id": "e385904555dfa10a",
+        "type": "cast-to-client",
+        "z": "0a06f0327cd1dc29",
+        "g": "a926ec102b0a6476",
+        "name": "Cast fire place movie to TV",
+        "url": "",
+        "contentType": "video",
+        "message": "",
+        "language": "en",
+        "ip": "192.168.1.128",
+        "port": "",
+        "volume": "",
+        "x": 490,
+        "y": 640,
+        "wires": [
+            [
+                "e0ab717ca32176ce"
+            ]
+        ]
+    },
+    {
+        "id": "e0ab717ca32176ce",
+        "type": "debug",
+        "z": "0a06f0327cd1dc29",
+        "g": "a926ec102b0a6476",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 700,
+        "wires": []
+    },
+    {
         "id": "5c0bd98adaf75e85",
         "type": "api-call-service",
         "z": "1c1f6e258d62731d",
@@ -1482,7 +1632,8 @@
         "y": 700,
         "wires": [
             [
-                "02471d6e0ac7beb7"
+                "02471d6e0ac7beb7",
+                "5f7f2002149d69ad"
             ],
             []
         ]
@@ -1512,12 +1663,22 @@
                 "vt": "str"
             },
             {
+                "t": "eq",
+                "v": "/fire",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "🔥",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 4,
+        "outputs": 6,
         "x": 610,
         "y": 800,
         "wires": [
@@ -1529,6 +1690,12 @@
             ],
             [
                 "3d670f449623258f"
+            ],
+            [
+                "5d83bc688529b09a"
+            ],
+            [
+                "5d83bc688529b09a"
             ],
             [
                 "6d409e3187fb28c4"
@@ -1614,7 +1781,7 @@
             "57a45e26ab8d85ad"
         ],
         "x": 925,
-        "y": 960,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1931,6 +2098,38 @@
         "statusType": "auto",
         "x": 360,
         "y": 300,
+        "wires": []
+    },
+    {
+        "id": "5f7f2002149d69ad",
+        "type": "debug",
+        "z": "1c1f6e258d62731d",
+        "g": "ad06c47a6c1c904e",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "c8a84de3b1e1be60",
+        "type": "link out",
+        "z": "1c1f6e258d62731d",
+        "g": "546da9f9dedf6314",
+        "name": "Fire",
+        "mode": "link",
+        "links": [
+            "922f2401a66a9303"
+        ],
+        "x": 925,
+        "y": 900,
         "wires": []
     }
 ]
